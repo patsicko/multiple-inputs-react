@@ -32,6 +32,7 @@ const newField={
 }
 
 
+
 setInput(input.concat(newField));
 setShowForm(false);
 
@@ -42,7 +43,8 @@ setShowForm(false);
     <>
     <div className={styles.fields}>
     <Form className={styles.form}>
-      {input.map((item,index)=>{
+
+      {input.map((item,index)=>(
 
 
        <div key={index}>
@@ -52,7 +54,7 @@ setShowForm(false);
         </div>
 
 
-      })}
+      ))}
            
     </Form>
 
