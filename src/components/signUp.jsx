@@ -33,7 +33,7 @@ const SignUp=()=>{
  validateSchema.validate(address,{abortEarly:false}).then((valid)=>{
     console.log(valid)
     
-    submit();
+    // submit();
     
 
  }).catch((err)=>{
@@ -55,6 +55,7 @@ const submit=(e)=>{
  
  const handleAddress=(e)=>{
     setAddress({...address,[e.target.name]:e.target.value})
+    validateForm();
  }
     return(<>
     <div className={styles.sign}>
