@@ -34,6 +34,7 @@ const SignUp=()=>{
     console.log(valid)
     
     submit();
+    
 
  }).catch((err)=>{
 

@@ -128,7 +128,11 @@ const[data,setData]=useState({
     name:''
 })
 
-const[error,setError]=useState("");
+const[error,setError]=useState({
+    label:'',
+    type:'',
+    name:""
+});
 
 const validateSChema=yup.object().shape({
     label:yup.string().required(),
@@ -151,14 +155,13 @@ const validateForm=()=>{
 
         )
      
-
+      const dataError={}
         error.inner.map(item=>{
             console.log(item.message)
             
-            setError({
-                ...error,
-                [item.path]:item.message
-            })
+            dataError[item.path]=item.message;
+
+            setError(dataError);
             
         })
     })
