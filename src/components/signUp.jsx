@@ -25,7 +25,7 @@ const SignUp=()=>{
     name:yup.string().required(),
     email:yup.string().required(),
     password:yup.string().min(4).max(8).required(),
-    confirm:yup.string().oneOf([yup.ref("password")])
+    confirm:yup.string().oneOf([yup.ref("password")],null)
 
  })
 
